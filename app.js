@@ -59,6 +59,15 @@ guessBtn.addEventListener('click', function(){
         }else{
             // game continues answer wrong
             
+            // change border color
+            guessInput.style.borderColor = 'red';
+            
+            // clear the input
+            guessInput.value = '';
+
+            //tell user its the wrong number
+            setMessage(`${guess} is not correct, ${guessesLeft} guesses left`, 'red');
+
         }
     }
 });
