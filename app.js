@@ -8,7 +8,7 @@
 // Game values
 let min = 1,
     max = 10,
-    winningNum = 2,
+    winningNum = getRandomNum(min, max),
     guessesLeft = 3;
 
 // UI elements
@@ -90,7 +90,11 @@ function gameOver(won, msg){
     guessBtn.className += 'play-again';
 }
 
+// Get winning number
+function getRandomNum(min, max){
+    return Math.floor(Math.random()*(max-min+1)+min);
 
+}
 
 // set message
 function setMessage(msg, color){
